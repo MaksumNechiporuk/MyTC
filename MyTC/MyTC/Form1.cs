@@ -20,14 +20,19 @@ namespace MyTC
 
         int currIndex = -1;
         string currListViewAdress = "";
+        string strCopy;
+        ToolStripMenuItem copyMenuItem;
+        ToolStripMenuItem pasteMenuItem;
+        ToolStripMenuItem RenameMenuItem;
+        ToolStripMenuItem DeleteMenuItem;
         public Form1()
         {
             InitializeComponent();
             listView1.ColumnClick += new ColumnClickEventHandler(ClickOnColumn);
-            ToolStripMenuItem copyMenuItem = new ToolStripMenuItem("Копировать");
-            ToolStripMenuItem pasteMenuItem = new ToolStripMenuItem("Вставить");
-            ToolStripMenuItem RenameMenuItem = new ToolStripMenuItem("Переименовать");
-            ToolStripMenuItem DeleteMenuItem = new ToolStripMenuItem("Удалить");
+            copyMenuItem = new ToolStripMenuItem("Копировать");
+            pasteMenuItem = new ToolStripMenuItem("Вставить");
+            RenameMenuItem = new ToolStripMenuItem("Переименовать");
+            DeleteMenuItem = new ToolStripMenuItem("Удалить");
             
             contextMenuStrip1.Items.AddRange(new[] { copyMenuItem, pasteMenuItem, RenameMenuItem , DeleteMenuItem });
             copyMenuItem.Click += CopyMenuItem_Click;
@@ -97,12 +102,23 @@ namespace MyTC
 
         private void PasteMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Delete");
+            string name;
+            name = strCopy.Substring(strCopy.LastIndexOf('\\') + 1);
+            if (listView1.SelectedItems.Count==-1)
+            {
+                File.Copy(strCopy, listView1.SelectedItems[0].Name+"\\"+ name);
+            }
+            else
+                File.Copy(strCopy, toolStripTextBox1.Text + "\\" + name);
+            listView1.Refresh();
         }
 
         private void CopyMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Copy");
+
+            strCopy = listView1.SelectedItems[0].Name;
+            pasteMenuItem.Enabled = true;
+           // MessageBox.Show("Copy");
         }
 
         private void ClickOnColumn(object sender, ColumnClickEventArgs e)
@@ -580,7 +596,7 @@ namespace MyTC
                         {
                             f = new FileInfo(@s2);
                             t = s2.Substring(s2.LastIndexOf('\\') + 1);
-                            lw = new ListViewItem(new string[] { t }, 0);
+                            lw = new ListViewItem(new string[] { t },0);
                             lw.Name = s2;
                             listView1.Items.Add(lw);
                         }
@@ -599,6 +615,8 @@ namespace MyTC
                     toolStripTextBox1.Text = currListViewAdress;
                 }
             }
-        }     
+        }
+
+      
     }
 }

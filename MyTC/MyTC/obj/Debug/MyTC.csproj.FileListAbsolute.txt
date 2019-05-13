@@ -8,3 +8,13 @@ E:\ШАГ\itstep\Програмування\Project WinForms\MyTC\MyTC\obj\Debug
 E:\ШАГ\itstep\Програмування\Project WinForms\MyTC\MyTC\obj\Debug\MyTC.csproj.CoreCompileInputs.cache
 E:\ШАГ\itstep\Програмування\Project WinForms\MyTC\MyTC\obj\Debug\MyTC.exe
 E:\ШАГ\itstep\Програмування\Project WinForms\MyTC\MyTC\obj\Debug\MyTC.pdb
+E:\ШАГ\MyTC\MyTC\MyTC\bin\Debug\MyTC.exe.config
+E:\ШАГ\MyTC\MyTC\MyTC\bin\Debug\MyTC.exe
+E:\ШАГ\MyTC\MyTC\MyTC\bin\Debug\MyTC.pdb
+E:\ШАГ\MyTC\MyTC\MyTC\obj\Debug\MyTC.csprojAssemblyReference.cache
+E:\ШАГ\MyTC\MyTC\MyTC\obj\Debug\MyTC.Form1.resources
+E:\ШАГ\MyTC\MyTC\MyTC\obj\Debug\MyTC.Properties.Resources.resources
+E:\ШАГ\MyTC\MyTC\MyTC\obj\Debug\MyTC.csproj.GenerateResource.cache
+E:\ШАГ\MyTC\MyTC\MyTC\obj\Debug\MyTC.csproj.CoreCompileInputs.cache
+E:\ШАГ\MyTC\MyTC\MyTC\obj\Debug\MyTC.exe
+E:\ШАГ\MyTC\MyTC\MyTC\obj\Debug\MyTC.pdb
